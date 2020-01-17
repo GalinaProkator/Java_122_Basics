@@ -6,6 +6,16 @@ public class SameDigitInNumberTwoOrMoreTimes {
 		String strUserNum = JOptionPane.showInputDialog("Please enter a number");
 		int userNum = Integer.parseInt(strUserNum);
 
+		if (isSameDigitTwoOrMoreTimes(userNum)) {
+			System.out.println("YES");
+		} 
+		else {
+			System.out.println("NO");
+		}
+
+	}
+
+	private static boolean isSameDigitTwoOrMoreTimes(int userNum) {
 		int[] array = new int[10];
 		for (int i = 0; i < array.length; i++) {
 			array[i] = 0;
@@ -23,13 +33,9 @@ public class SameDigitInNumberTwoOrMoreTimes {
 		}
 
 		if (a != array.length) {
-			System.out.println("YES");
+			return true;
 		}
-		else {
-			System.out.println("NO");
-		}
-
-
+		return false;
 	}
 
 }

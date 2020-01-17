@@ -2,18 +2,22 @@
 public class ArrayBalanced {
 
 	public static void main(String[] args) {
-		int[] array = {1,2,3,4,3,7,9};
+		int[] array = { 1, 2, 3, 4, 3, 7, 8 };
 
+		boolean isArrayBalanced = isBalanced(array);
+		System.out.println(isArrayBalanced);
+	}
+
+	private static boolean isBalanced(int[] array) {
 		int arraySum = 0;
-
 		int sum1 = 0;
-
-		for (int i=0; i < array.length; i++) {
+		
+		for (int i = 0; i < array.length; i++) {
 			arraySum = arraySum + array[i];
 		}
 		if (arraySum % 2 != 0) {
-			System.out.println("The array is not balanced");
-		}
+			return false;
+		} 
 		else {
 			int halfSum = arraySum / 2;
 			int a = 0;
@@ -23,10 +27,9 @@ public class ArrayBalanced {
 				a++;
 			}
 			if (sum1 == halfSum) {
-				System.out.println("The array is balanced");
-			}
-			else {
-				System.out.println("The array is balanced");
+				return true;
+			} else {
+				return false;
 			}
 		}
 	}

@@ -10,12 +10,23 @@ public class PalindromeArray {
 			array[i] = Integer.parseInt(strNum);
 			System.out.print(array[i] + " ");	
 		}
+		boolean isPalindrome = isPalindromeForArray(array);
+		
+		if (isPalindrome) {
+			System.out.println("The array is a palindrome");
+		}
+		else {
+			System.out.println("The array is not a palindrome");
+		}
+
+	}
+
+	private static boolean isPalindromeForArray(int[] array) {
 		boolean palindrome = true;
 		int i = 0;
-		int middle = (array.length - 1) / 2;
 		int end = array.length - 1;
 
-		while (palindrome == true && i <= middle) {
+		while (palindrome == true && i <= end) {
 			if (array[i] == array[end]) {
 				palindrome = true;
 				i++;
@@ -25,13 +36,7 @@ public class PalindromeArray {
 				palindrome = false;
 			}
 		}
-		if (palindrome == true) {
-			System.out.println("The array is a palindrome");
-		}
-		else {
-			System.out.println("The array is not a palindrome");
-		}
-
+		return palindrome;
 	}
 
 }

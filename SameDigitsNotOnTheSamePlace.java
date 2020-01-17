@@ -9,10 +9,15 @@ public class SameDigitsNotOnTheSamePlace {
 		String strNum2 = JOptionPane.showInputDialog("Please enter second number");
 		int num2 = Integer.parseInt(strNum2);
 
+		System.out.println(amountOfSameDigitsNotOnTheSamePlace(num1, num2));
+
+	}
+
+	private static int amountOfSameDigitsNotOnTheSamePlace(int num1, int num2) {
 		int[] arrayNum1 = new int[10];
 		for (int i = 0; i < arrayNum1.length; i++) {
 			arrayNum1[i] = 0;
-		}	
+		}
 
 		int[] arrayNum2 = new int[10];
 		for (int a = 0; a < arrayNum2.length; a++) {
@@ -34,13 +39,11 @@ public class SameDigitsNotOnTheSamePlace {
 			}
 		}
 
-		for(int b = 0;b<10;b++)	{
+		for (int b = 0; b < 10; b++) {
 			if (arrayNum1[b] > 0 && arrayNum2[b] > 0) {
 				counter++;
 			}
 		}
-	
-	System.out.println(counter);
-
-}
+		return counter;
+	}
 }
