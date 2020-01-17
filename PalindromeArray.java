@@ -28,12 +28,11 @@ public class PalindromeArray {
 
 		while (palindrome == true && i <= end) {
 			if (array[i] == array[end]) {
-				palindrome = true;
 				i++;
 				end--;
 			}
 			else {
-				palindrome = false;
+				return false;
 			}
 		}
 		return palindrome;
