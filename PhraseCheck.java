@@ -7,11 +7,10 @@ public class PhraseCheck {
     }
 
     private static boolean isPhraseCorrect(String string) throws Exception {
-        char openingBrace = '(';
         int count = 0;
 
         for (int i = 0; i < string.length(); i++) {
-            if (string.charAt(i) == openingBrace){
+            if (string.charAt(i) == '('){
                 count++;
             }
             else{
