@@ -13,7 +13,7 @@ public class ArrayBalanced {
 		int sum1 = 0;
 		
 		for (int i = 0; i < array.length; i++) {
-			arraySum = arraySum + array[i];
+			arraySum += array[i];
 		}
 		if (arraySum % 2 != 0) {
 			return false;
@@ -23,7 +23,7 @@ public class ArrayBalanced {
 			int a = 0;
 
 			while (a < array.length && sum1 < halfSum) {
-				sum1 = sum1 + array[a];
+				sum1 += array[a];
 				a++;
 			}
 			if (sum1 == halfSum) {
